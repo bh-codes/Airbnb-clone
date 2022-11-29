@@ -23,7 +23,7 @@
 }
 
 section {
-  padding: 30px;
+  padding: 20px;
   background-color: white;
 }
 
@@ -46,38 +46,57 @@ p {
   line-height: 1.15em;
 }
 
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
 .card {
   width: 175px;
   font-size: 12px;
-  margin-left: 36px;
-  margin-top: 20px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-img.katie {
-  border-radius: 9px;
+.card--image {
   width: 100%;
+  border-radius: 9px;
+  margin-bottom: 9px;
 }
 
 .star-icon {
   padding-right: 4px;
 }
 
-.rating {
-  padding-bottom: 8px;
-}
-
-.katie-title {
-  padding-bottom: 8px;
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
 .star-rating {
   color: #918E9B;
 }
 
-.rate-price {
-  margin-bottom: 30px;
+.card--price {
+  margin-top: auto;
 }
 
-span.price {
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+span.bold {
   font-weight: 600;
 }

@@ -6,13 +6,18 @@ import data from "./data"
 
 function App() {
   const lessons = data.map(item => {
-    return <Card img={item.coverImg} location={item.location} rating={item.stats.rating} reviewCount={item.stats.reviewCount} title={item.title} price={item.price}/>
+    return <Card 
+              key={item.id} 
+              item={item} //can use {... item} and remove all (.item) in card component but more obscure to figure out what we are passing
+              />
   })
   return (
     <body>
       <Navbar />
       <Hero />
+      <section className="cards-list">
       {lessons}
+      </section>
     </body>
   )
 }
